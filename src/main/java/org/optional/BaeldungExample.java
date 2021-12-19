@@ -1,8 +1,8 @@
-package org.example.optional;
+package org.optional;
 
 
-import org.example.optional.model.Modem;
-import org.example.optional.model.Person;
+import org.optional.model.Modem;
+import org.optional.model.Person;
 import org.junit.Test;
 
 import java.util.Arrays;

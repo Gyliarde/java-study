@@ -1,6 +1,6 @@
-package org.example.optional;
+package org.optional;
 
-import org.example.optional.model.Client;
+import org.optional.model.Client;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,8 +1,8 @@
-package org.example.optional;
+package org.optional;
 
-import org.example.optional.model.Computer;
-import org.example.optional.model.SoundCard;
-import org.example.optional.model.Usb;
+import org.optional.model.Computer;
+import org.optional.model.SoundCard;
+import org.optional.model.Usb;
 import org.junit.Assert;
 import org.junit.Test;
 

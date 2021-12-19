@@ -1,4 +1,4 @@
-package org.example.optional.model;
+package org.optional.model;
 
 public class Address {
     private String address;

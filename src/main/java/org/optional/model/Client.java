@@ -1,4 +1,4 @@
-package org.example.optional.model;
+package org.optional.model;
 
 import java.util.Optional;
 
