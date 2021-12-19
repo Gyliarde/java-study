@@ -1,8 +1,8 @@
-package org.optional;
+package gyliarde.optional;
 
-import org.optional.model.Computer;
-import org.optional.model.SoundCard;
-import org.optional.model.Usb;
+import gyliarde.optional.model.Computer;
+import gyliarde.optional.model.SoundCard;
+import gyliarde.optional.model.Usb;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,8 +1,8 @@
-package org.optional;
+package gyliarde.optional;
 
 
-import org.optional.model.Modem;
-import org.optional.model.Person;
+import gyliarde.optional.model.Modem;
+import gyliarde.optional.model.Person;
 import org.junit.Test;
 
 import java.util.Arrays;

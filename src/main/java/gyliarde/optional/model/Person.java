@@ -1,4 +1,4 @@
-package org.optional.model;
+package gyliarde.optional.model;
 
 import java.util.Optional;
 

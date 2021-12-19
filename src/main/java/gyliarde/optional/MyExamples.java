@@ -1,6 +1,6 @@
-package org.optional;
+package gyliarde.optional;
 
-import org.optional.model.Client;
+import gyliarde.optional.model.Client;
 import org.junit.Assert;
 import org.junit.Test;
 
