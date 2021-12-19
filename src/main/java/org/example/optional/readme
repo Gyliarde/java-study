@@ -1,0 +1,8 @@
+Optional é utilizado para auxiliar no tratamento de null pointer exceptions;
+
+Deve ser usado apenas em retorno de valores;
+
+Atenção:
+* Não utilizar como parâmetro de classe. Alem de não serializavel ele acaba obrigando a verificação do null pointer
+Que exatamente o que o Optional que evitar;
+* Não utilizar como parâmetro de entrada de método, porque também obrigaria a verificação de null pointer;
