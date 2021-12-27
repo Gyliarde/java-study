@@ -15,4 +15,13 @@ public class AbstractFactory<T> {
     public T getT() {
         return t;
     }
+
+    /**
+     * Bounded type defined by extent class or interface
+     */
+    public <U extends Object & Pair> U inspect(U u) {
+        System.out.println("T: " + t.getClass().getName());
+        System.out.println("U: " + u.getClass().getName());
+        return u;
+    }
 }
