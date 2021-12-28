@@ -1,4 +1,4 @@
 package gyliarde.generics.model;
 
-public class Ferrari {
+public class Ferrari extends Car {
 }
