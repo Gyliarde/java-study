@@ -80,7 +80,7 @@ public class BaeldungExamples {
      * The same rule applies to any collection of a type and its subtypes.
      */
 
-    public static void paintAllBuildingsAndSubtypes(List<? extends Building> buildings) {
+    public static  void paintAllBuildingsAndSubtypes(List<? extends Building> buildings) {
         buildings.forEach(Building::paint);
     }
 
@@ -94,4 +94,31 @@ public class BaeldungExamples {
      * Now this method will work with type Building and all its subtypes. This is called an upper-bounded wildcard, where type Building is the upper bound.
      * We can also specify wildcards with a lower bound, where the unknown type has to be a supertype of the specified type. Lower bounds can be specified using the super keyword followed by the specific type. For example, <? super T> means unknown type that is a superclass of T (= T and all its parents).
      */
+
+
+    public static void printListObject(List<Object> list) {
+        for (Object element : list) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public static <T> void printListParametrized(List<T> list) {
+        for (Object element : list) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public static void printListWildCard(List<?> list) {
+        for (Object element: list) {
+            System.out.print(element + " ");
+        }
+    }
+
+    @Test
+    public void testWildCard() {
+        List<Integer> li = Arrays.asList(1, 2, 3);
+        printListParametrized(li);
+        printListWildCard(li);
+    }
+
 }

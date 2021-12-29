@@ -6,6 +6,7 @@ import gyliarde.generics.model.Porshe;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -82,7 +83,7 @@ public class WildCards {
     }
 
 
-    public static void printList(List<?> list) {
+    public static <T> void printList(List<T> list) {
         for (Object elem : list)
             System.out.println(elem + " ");
         System.out.println();
@@ -96,4 +97,42 @@ public class WildCards {
     public static void printListTwo(Class<?> clazz) {
         System.out.println(clazz);
     }
+
+    /**
+     * Lower Bounded Wildcards
+     *
+     * The Upper Bounded Wildcards section shows that an upper bounded wildcard restricts the unknown type to be a
+     * specific type or a subtype of that type and is represented using the extends keyword.
+     *
+     * In a similar way,
+     * a lower bounded wildcard restricts the unknown type to be a specific type or a super type of that type.
+     *
+     * A lower bounded wildcard is expressed using the wildcard character ('?'), following by the super keyword,
+     * followed by its lower bound: <? super A>.
+     *
+     */
+
+    /**
+     *
+     * To write the method that works on lists of Integer and the supertypes of Integer, such as Integer, Number,
+     * and Object, you would specify List<? super Integer>. The term List<Integer> is more restrictive than List<? super Integer>
+     * because the former matches a list of type Integer only, whereas the latter matches a list of any type that is a supertype of Integer.
+     */
+    public static void addNumbers(List<? super Integer> list) {
+        for (int i = 1; i <= 10; i++) {
+            list.add(i);
+        }
+    }
+
+    @Test
+    public void shouldAddNumberWhenSuperTypeOfInteger() {
+        List<Integer> integerList = Arrays.asList(1);
+        List<Number> numberList = Arrays.asList(2);
+        List<Serializable> serializableList = Arrays.asList(3);
+
+        addNumbers(integerList);
+        addNumbers(numberList);
+        addNumbers(serializableList);
+    }
+
 }
