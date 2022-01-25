@@ -5,10 +5,21 @@ import java.util.Objects;
 public class Person {
     private Integer id;
     private String name;
+    private Integer age;
+
+    public static Person onePerson(Integer id, String name, Integer age) {
+        return new Person(id,name,age);
+    }
 
     public Person(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Person(Integer id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
     }
 
     public Integer getId() {
@@ -27,6 +38,14 @@ public class Person {
         this.name = name;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,5 +57,14 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
